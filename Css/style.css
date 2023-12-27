@@ -1,0 +1,661 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 13px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 15px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ee7878;
+  border-radius: 15px;
+}
+.sec1 {
+  width: 100%;
+  height: 100vh;
+}
+
+.sec1 nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  right: 0;
+  left: 0;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.sec1 nav .logo img {
+  width: 150px;
+  cursor: pointer;
+  margin: 7px 0;
+}
+
+.sec1 nav ul {
+  list-style: none;
+}
+
+.sec1 nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.sec1 nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  font-size: 20px;
+  transition: 0.1s;
+}
+
+.sec1 nav ul li a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: #fc3737;
+  display: block;
+  transition: 0.2s linear;
+}
+
+.sec1 nav ul li a:hover::after {
+  width: 100%;
+}
+
+.sec1 nav ul li a:hover {
+  color: #fc3737;
+}
+
+.sec1 nav .icon i {
+  font-size: 18px;
+  color: #000;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sec1 nav .icon i:hover {
+  color: #fc3737;
+}
+
+.sec1 .main {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  top: 15%;
+  padding-right: 2%;
+}
+
+.sec1 .main .men_text h1 {
+  font-size: 60px;
+  position: relative;
+  left: 9%;
+  margin-bottom: 10%;
+}
+
+.sec1 .main .men_text h1 span {
+  margin-left: 15px;
+  color: #fc3737;
+  font-family: mv boli;
+  line-height: 22px;
+  font-size: 70px;
+}
+
+@keyframes rotateAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.main .main_image img {
+  width: 500px;
+  animation: rotateAnimation 10s linear infinite; /* Adjust the animation properties as needed */
+}
+
+.sec1 .main_btn {
+  background: #fc3737;
+
+  width: 160px;
+  cursor: pointer;
+  padding: 12px 25px;
+  margin-left: 9%;
+  position: relative;
+  text-align: center;
+  bottom: 2%;
+}
+
+.sec1 .main_btn a {
+  color: #fff;
+  margin-right: 5px;
+  text-decoration: none;
+}
+
+.sec1 .main_btn i {
+  color: #fff;
+  transition: 0.3s;
+}
+
+.sec1 .main_btn:hover i {
+  transform: translateX(7px);
+}
+
+.about {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.about .vd video {
+  width: 450px;
+  position: relative;
+  margin-top: 10%;
+  margin-left: 4%;
+  border-radius: 5px;
+  border: #000 solid 3px;
+}
+
+.about .about_text h1 span {
+  color: #fc3737;
+  margin-right: 15px;
+  font-family: mv boli;
+}
+
+.about .about_text h1 {
+  font-size: 55px;
+  position: relative;
+  margin-bottom: 4%;
+}
+
+.about .about_text h3 {
+  font-size: 30px;
+  margin: 0 0 20px 0;
+}
+
+.about .about_text p {
+  width: 600px;
+  text-align: justify;
+  line-height: 1.5;
+  font-size: 17px;
+  font-family: mv boli;
+  font-weight: 600;
+  margin-top: 15%;
+}
+
+.about .about_text {
+  margin-right: 8%;
+  margin-bottom: 10%;
+}
+
+.menu {
+  width: 100%;
+  padding: 5% 0;
+}
+
+.menu h1 {
+  font-size: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.menu h1 span {
+  font-size: 55px;
+
+  color: #fc3737;
+  margin-left: 15px;
+  font-family: mv boli;
+}
+
+.menu h1 span::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #fac031;
+  display: block;
+  position: relative;
+  bottom: 15px;
+}
+
+.menu .menu_box {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-left: 10%;
+}
+
+.menu .menu_box .menu_card {
+  width: 80%;
+  height: 98%;
+  padding: 2%;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.menu .menu_box .menu_card .menu_image {
+  width: 300px;
+  height: 245px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.menu .menu_box .menu_card .menu_image img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  object-position: center;
+  transition: 0.3s;
+}
+
+.menu .menu_box .menu_card .menu_image:hover img {
+  transform: scale(1.1);
+}
+
+.menu .menu_box .menu_card .small_card {
+  width: 45px;
+  height: 45px;
+  float: right;
+  position: relative;
+
+  opacity: 0;
+  border-radius: 7px;
+  transition: 0.3s;
+}
+
+.menu .menu_box .menu_card:hover .small_card {
+  position: relative;
+  opacity: 1;
+}
+
+.menu .menu_box .menu_card .small_card i {
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 50px;
+  color: #000;
+  cursor: pointer;
+  text-shadow: 0 0 6px #000;
+  transition: 0.2s;
+}
+
+.menu .menu_box .menu_card .small_card i:hover {
+  color: #fac031;
+}
+
+.menu .menu_box .menu_card .menu_info h2 {
+  width: 60%;
+  text-align: center;
+  margin: 10px auto 10px auto;
+  font-size: 25px;
+  margin-bottom: 5%;
+  color: #fc3737;
+}
+
+.menu .menu_box .menu_card .menu_info h3 {
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+.menu .menu_box .menu_card .menu_info .menu_icon {
+  color: #fac031;
+  text-align: center;
+  margin: 10px 0 10px 0;
+  margin-bottom: 5%;
+}
+
+.menu .menu_box .menu_card .menu_info .menu_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  background: #000;
+  padding: 8px 10px;
+  margin: 0 80px;
+  transition: 0.3s;
+}
+
+.menu_btn:hover {
+  transform: scale(1.1); /* Scale the element on hover */
+}
+/* Add these styles for the sidebar */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 8%;
+  height: 100%;
+  width: 8%;
+  background-color: #333;
+  padding-top: 12%;
+  display: flex;
+  flex-direction: column; /* Align items vertically */
+  align-items: center; /* Center items horizontally */
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  font-size: 15px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  width: 100%; /* Make the list items take full width */
+
+  padding-bottom: 20%;
+}
+
+.sidebar i {
+  margin-bottom: 5px; /* Add some spacing between icon and text */
+}
+
+.sidebar li:hover {
+  transform: scale(1.1); /* Scale the element on hover */
+}
+
+.sidebar li a:hover {
+  color: #fac031;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-family: mv poli;
+  font-weight: bold;
+}
+
+.review {
+  width: 100%;
+  height: 100vh;
+  padding: 70px 0;
+  margin-bottom: 50px;
+}
+
+.review h1 {
+  font-size: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.review h1 span {
+  margin-left: 15px;
+  color: #fc3737;
+  font-family: mv boli;
+}
+
+.review h1 span::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #fc3737;
+  position: relative;
+  bottom: 15px;
+  display: block;
+}
+
+.review .review_box {
+  width: 95%;
+  margin: 3% auto;
+  display: flex;
+}
+
+.review .review_box .review_card {
+  width: 25%;
+  height: 400px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  padding: 8px 20px;
+  margin: 0 8px;
+}
+
+.review .review_box .review_card .review_profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: 0.3s;
+}
+
+.review .review_box .review_card:hover .review_profile {
+  transform: translateY(-60px);
+}
+
+.review .review_box .review_card .review_profile img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  border: 5px solid #cccccc;
+}
+
+.review .review_box .review_card .review_text {
+  text-align: center;
+}
+
+.review .review_box .review_card .review_text .name {
+  color: #000;
+  transition: 0.3s;
+}
+
+.review .review_box .review_card:hover .review_text .name {
+  transform: translateY(-50px);
+}
+
+.review .review_box .review_card .review_text .review_icon {
+  color: #fac031;
+  transition: 0.3s;
+}
+
+.review .review_box .review_card:hover .review_text .review_icon {
+  transform: translateY(-30px);
+}
+
+.review .review_box .review_card .review_text .review_social i {
+  margin: 5px 1px;
+  font-size: 15px;
+  opacity: 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.review .review_box .review_card:hover .review_text .review_social i {
+  opacity: 1;
+  transform: translateY(-8px);
+}
+
+.review .review_box .review_card .review_text p {
+  text-align: center;
+  line-height: 22px;
+  transition: 0.3s;
+}
+
+.review .review_box .review_card:hover .review_text p {
+  margin-top: 5px;
+}
+
+.order {
+  width: 100%;
+  height: 100vh;
+  padding: 70px 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.order h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-size: 55px;
+  margin-top: 5%;
+  margin-bottom: 2%;
+}
+
+.order h1 span {
+  color: #fc3737;
+  margin-right: 15px;
+  font-family: mv boli;
+}
+
+.order h1 span::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #080808;
+  display: block;
+  position: relative;
+  bottom: 15px;
+}
+
+.order .order_main {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.order .order_main .order_image img {
+  width: 400px;
+}
+
+.order .order_main form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0 10px;
+  margin-right: 15%;
+}
+
+.order .order_main form .input p {
+  line-height: 25px;
+  font-family: mv poli;
+}
+
+.order .order_main form .input {
+  margin: 5px;
+}
+
+.order .order_main form .input input {
+  width: 300px;
+  height: 35px;
+  padding: 0 10px;
+  border: 2px solid #cccccc;
+  background: #eeeeee;
+  outline: none;
+  border-radius: 3px;
+}
+
+.order .order_main form .input input:focus {
+  border: 2px solid #fc3737;
+}
+
+.order .order_main form .order_btn {
+  padding: 10px 0;
+  background: #fc3737;
+  color: white;
+  width: 40%;
+  text-align: center;
+  margin-top: 20px;
+  text-decoration: none;
+  border: none;
+}
+.order .order_main form .order_btn:hover {
+  transform: translate(2px);
+}
+
+footer {
+  width: 100%;
+  padding: 20px;
+  background: #eeeeee;
+}
+
+footer .footer_main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+footer .footer_main .footer_tag {
+  text-align: center;
+}
+
+footer .footer_main .footer_tag h2 {
+  color: #000;
+  margin-bottom: 15px;
+  font-size: 25px;
+}
+
+footer .footer_main .footer_tag p {
+  margin: 5px 0;
+}
+
+footer .footer_main .footer_tag i {
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+footer .footer_main .footer_tag i:hover {
+  color: #fc3737;
+}
+
+footer li a {
+  text-decoration: none;
+  list-style: none;
+  color: #000;
+}
+
+footer li {
+  list-style: none;
+}
+
+footer li a:hover {
+  color: #fc3737;
+}
+
+@media (max-width: 767px) {
+  .sec1 nav {
+    flex-direction: row; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the start of the container */
+    padding: 10px; /* Add some padding for better spacing */
+  }
+  .sec1 .icon {
+    display: none;
+  }
+
+  .sec1 nav ul {
+    text-align: center; /* Center the list items */
+    margin-top: 5px; /* Add some top margin for better spacing */
+  }
+
+  .sec1 nav ul li {
+    margin: 5px 0; /* Add margin between list items */
+    display: block;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+}
